@@ -24,7 +24,7 @@ import org.chipsalliance.cde.config.Parameters
 import freechips.rocketchip.util._
 import freechips.rocketchip.tile
 import freechips.rocketchip.rocket.{PipelinedMultiplier,BP,BreakpointUnit,Causes,CSR}
-import freechips.rocketchip.rocket.ALU._
+import ALUTMR._
 
 import boom.v4.common._
 import boom.v4.ifu._
@@ -170,7 +170,7 @@ class ALUUnit(dataWidth: Int)(implicit p: Parameters)
     OP2_IMMOH -> op2_oh
   ))
 
-  val alu = Module(new freechips.rocketchip.rocket.ALU())
+  val alu = Module(new ALUTMR())
 
   alu.io.in1 := op1_data.asUInt
   alu.io.in2 := op2_data.asUInt
