@@ -13,7 +13,7 @@
 // A given execution pipeline may contain multiple functional units; one or more
 // read ports, and one or more writeports.
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import scala.collection.mutable.{ArrayBuffer}
 
@@ -25,9 +25,9 @@ import freechips.rocketchip.rocket.{BP}
 import freechips.rocketchip.tile
 
 import FUConstants._
-import boom.v3.common._
-import boom.v3.ifu.{GetPCFromFtqIO}
-import boom.v3.util.{ImmGen, IsKilledByBranch, BranchKillableQueue, BoomCoreStringPrefix}
+import testriscvboom.v3.common._
+import testriscvboom.v3.ifu.{GetPCFromFtqIO}
+import testriscvboom.v3.util.{ImmGen, IsKilledByBranch, BranchKillableQueue, BoomCoreStringPrefix}
 
 /**
  * Response from Execution Unit. Bundles a MicroOp with data
@@ -128,7 +128,7 @@ abstract class ExecutionUnit(
     val fcsr_rm = if (hasFcsr) Input(Bits(tile.FPConstants.RM_SZ.W)) else null
 
     // only used by the mem unit
-    val lsu_io = if (hasMem) Flipped(new boom.v3.lsu.LSUExeIO) else null
+    val lsu_io = if (hasMem) Flipped(new testriscvboom.v3.lsu.LSUExeIO) else null
     val bp = if (hasMem) Input(Vec(nBreakpoints, new BP)) else null
     val mcontext = if (hasMem) Input(UInt(coreParams.mcontextWidth.W)) else null
     val scontext = if (hasMem) Input(UInt(coreParams.scontextWidth.W)) else null

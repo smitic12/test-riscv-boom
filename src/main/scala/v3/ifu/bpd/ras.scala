@@ -3,7 +3,7 @@
 // All Rights Reserved. See LICENSE and LICENSE.SiFive for license details.
 //------------------------------------------------------------------------------
 
-package boom.v3.ifu
+package testriscvboom.v3.ifu
 
 import chisel3._
 import chisel3.util._
@@ -18,9 +18,9 @@ import freechips.rocketchip.util._
 import freechips.rocketchip.util.property._
 
 
-import boom.v3.common._
-import boom.v3.exu.{CommitExceptionSignals, BranchDecode, BrUpdateInfo}
-import boom.v3.util._
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.{CommitExceptionSignals, BranchDecode, BrUpdateInfo}
+import testriscvboom.v3.util._
 
 class BoomRAS(implicit p: Parameters) extends BoomModule()(p)
 {

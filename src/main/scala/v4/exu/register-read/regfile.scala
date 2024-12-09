@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import scala.collection.mutable.ArrayBuffer
 
@@ -18,8 +18,8 @@ import chisel3.util._
 
 import org.chipsalliance.cde.config.Parameters
 
-import boom.v4.common._
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.util._
 
 abstract class RegisterFile[T <: Data](
   dType: T,

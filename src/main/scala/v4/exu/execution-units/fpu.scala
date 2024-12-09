@@ -3,7 +3,7 @@
 // All Rights Reserved. See LICENSE and LICENSE.SiFive for license details.
 //------------------------------------------------------------------------------
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import chisel3._
 import chisel3.util._
@@ -14,7 +14,7 @@ import freechips.rocketchip.tile.{FPUCtrlSigs, HasFPUParameters}
 import freechips.rocketchip.tile
 import freechips.rocketchip.rocket
 import freechips.rocketchip.util.uintToBitPat
-import boom.v4.common._
+import testriscvboom.v4.common._
 
 /**
  * Bundle representing data to be sent to the FPU

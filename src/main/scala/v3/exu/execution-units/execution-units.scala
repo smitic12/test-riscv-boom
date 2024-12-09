@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import scala.collection.mutable.{ArrayBuffer}
 
@@ -17,8 +17,8 @@ import chisel3._
 
 import org.chipsalliance.cde.config.{Parameters}
 
-import boom.v3.common._
-import boom.v3.util.{BoomCoreStringPrefix}
+import testriscvboom.v3.common._
+import testriscvboom.v3.util.{BoomCoreStringPrefix}
 
 /**
  * Top level class to wrap all execution units together into a "collection"

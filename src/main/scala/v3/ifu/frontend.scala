@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.ifu
+package testriscvboom.v3.ifu
 
 import chisel3._
 import chisel3.util._
@@ -23,9 +23,9 @@ import freechips.rocketchip.tile._
 import freechips.rocketchip.util._
 import freechips.rocketchip.util.property._
 
-import boom.v3.common._
-import boom.v3.exu.{CommitExceptionSignals, BranchDecode, BrUpdateInfo, BranchDecodeSignals}
-import boom.v3.util._
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.{CommitExceptionSignals, BranchDecode, BrUpdateInfo, BranchDecodeSignals}
+import testriscvboom.v3.util._
 
 
 class FrontendResp(implicit p: Parameters) extends BoomBundle()(p) {
@@ -296,7 +296,7 @@ class BoomFrontendIO(implicit p: Parameters) extends BoomBundle
 class BoomFrontend(val icacheParams: ICacheParams, staticIdForMetadataUseOnly: Int)(implicit p: Parameters) extends LazyModule
 {
   lazy val module = new BoomFrontendModule(this)
-  val icache = LazyModule(new boom.v3.ifu.ICache(icacheParams, staticIdForMetadataUseOnly))
+  val icache = LazyModule(new testriscvboom.v3.ifu.ICache(icacheParams, staticIdForMetadataUseOnly))
   val masterNode = icache.masterNode
   val resetVectorSinkNode = BundleBridgeSink[UInt](Some(() =>
     UInt(masterNode.edges.out.head.bundle.addressBits.W)))

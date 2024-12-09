@@ -3,12 +3,12 @@
 // All Rights Reserved. See LICENSE and LICENSE.SiFive for license details.
 //------------------------------------------------------------------------------
 
-package boom.v4
+package testriscvboom.v4
 
 package object common extends
-  boom.v4.common.constants.ScalarOpConstants with
-  boom.v4.common.constants.ExcCauseConstants with
-  boom.v4.common.constants.RISCVConstants
+  testriscvboom.v4.common.constants.ScalarOpConstants with
+  testriscvboom.v4.common.constants.ExcCauseConstants with
+  testriscvboom.v4.common.constants.RISCVConstants
 {
 }
 

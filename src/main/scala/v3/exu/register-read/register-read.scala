@@ -9,15 +9,15 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
 
 import org.chipsalliance.cde.config.Parameters
 
-import boom.v3.common._
-import boom.v3.util._
+import testriscvboom.v3.common._
+import testriscvboom.v3.util._
 
 /**
  * Handle the register read and bypass network for the OoO backend

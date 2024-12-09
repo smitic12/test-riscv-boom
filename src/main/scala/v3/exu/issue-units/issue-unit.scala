@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
@@ -17,9 +17,9 @@ import chisel3.util._
 import org.chipsalliance.cde.config.Parameters
 import freechips.rocketchip.util.{Str}
 
-import boom.v3.common._
-import boom.v3.exu.FUConstants._
-import boom.v3.util.{BoolToChar}
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.FUConstants._
+import testriscvboom.v3.util.{BoolToChar}
 
 /**
  * Class used for configurations

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.ifu
+package testriscvboom.v3.ifu
 
 import chisel3._
 import chisel3.util._
@@ -26,8 +26,8 @@ import freechips.rocketchip.rocket.{HasL1ICacheParameters, ICacheParams, ICacheE
 
 
 
-import boom.v3.common._
-import boom.v3.util.{BoomCoreStringPrefix}
+import testriscvboom.v3.common._
+import testriscvboom.v3.util.{BoomCoreStringPrefix}
 
 /**
  * ICache module

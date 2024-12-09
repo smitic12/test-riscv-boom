@@ -10,7 +10,7 @@ val rocketVersion = "1.6-snapshot"
 
 lazy val root = (project in file("."))
   .settings(
-    name := "boom",
+    name := "testriscvboom",
     libraryDependencies ++= Seq(
       "org.chipsalliance" %% "chisel" % chiselVersion,
       "org.chipsalliance" %% "cde" % rocketVersion,

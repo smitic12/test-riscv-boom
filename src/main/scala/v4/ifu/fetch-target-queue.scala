@@ -14,7 +14,7 @@
 // TODO:
 // * reduce port counts.
 
-package boom.v4.ifu
+package testriscvboom.v4.ifu
 
 import chisel3._
 import chisel3.util._
@@ -22,9 +22,9 @@ import chisel3.util._
 import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.util.{Str}
 
-import boom.v4.common._
-import boom.v4.exu._
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.exu._
+import testriscvboom.v4.util._
 
 /**
  * FTQ Parameters used in configurations

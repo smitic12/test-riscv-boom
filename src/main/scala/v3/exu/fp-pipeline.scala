@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
@@ -18,9 +18,9 @@ import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.rocket
 import freechips.rocketchip.tile
 
-import boom.v3.exu.FUConstants._
-import boom.v3.common._
-import boom.v3.util.{BoomCoreStringPrefix}
+import testriscvboom.v3.exu.FUConstants._
+import testriscvboom.v3.common._
+import testriscvboom.v3.util.{BoomCoreStringPrefix}
 
 /**
  * Top level datapath that wraps the floating point issue window, regfile, and arithmetic units.
@@ -58,7 +58,7 @@ class FpPipeline(implicit p: Parameters) extends BoomModule with tile.HasFPUPara
   //**********************************
   // construct all of the modules
 
-  val exe_units      = new boom.v3.exu.ExecutionUnits(fpu=true)
+  val exe_units      = new testriscvboom.v3.exu.ExecutionUnits(fpu=true)
   val issue_unit     = Module(new IssueUnitCollapsing(
                          issueParams.find(_.iqType == IQT_FP.litValue).get,
                          numWakeupPorts))

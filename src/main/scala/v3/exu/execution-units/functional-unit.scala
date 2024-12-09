@@ -14,7 +14,7 @@
 //
 // TODO: explore possibility of conditional IO fields? if a branch unit... how to add extra to IO in subclass?
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
@@ -25,9 +25,9 @@ import freechips.rocketchip.util._
 import freechips.rocketchip.tile
 import freechips.rocketchip.rocket.{PipelinedMultiplier,BP,BreakpointUnit,Causes,CSR}
 
-import boom.v3.common._
-import boom.v3.ifu._
-import boom.v3.util._
+import testriscvboom.v3.common._
+import testriscvboom.v3.ifu._
+import testriscvboom.v3.util._
 
 /**t
  * Functional unit constants
@@ -295,7 +295,7 @@ class ALUUnit(isJmpUnit: Boolean = false, numStages: Int = 1, dataWidth: Int)(im
     earliestBypassStage = 0,
     dataWidth = dataWidth,
     isJmpUnit = isJmpUnit)
-  with boom.v3.ifu.HasBoomFrontendParameters
+  with testriscvboom.v3.ifu.HasBoomFrontendParameters
 {
   val uop = io.req.bits.uop
 

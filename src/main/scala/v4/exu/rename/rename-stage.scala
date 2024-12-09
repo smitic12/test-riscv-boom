@@ -15,15 +15,15 @@
 //
 // Ren1 data is provided as an output to be fed directly into the ROB.
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import chisel3._
 import chisel3.util._
 
 import freechips.rocketchip.util._
 import org.chipsalliance.cde.config.Parameters
-import boom.v4.common._
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.util._
 
 abstract class AbstractRenameStage(
   plWidth: Int,

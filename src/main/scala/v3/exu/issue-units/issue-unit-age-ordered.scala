@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util.{log2Ceil, PopCount}
@@ -18,7 +18,7 @@ import org.chipsalliance.cde.config.Parameters
 import freechips.rocketchip.util.Str
 
 import FUConstants._
-import boom.v3.common._
+import testriscvboom.v3.common._
 
 /**
  * Specific type of issue unit

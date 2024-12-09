@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.lsu
+package testriscvboom.v3.lsu
 
 import chisel3._
 import chisel3.util._
@@ -16,9 +16,9 @@ import freechips.rocketchip.tile._
 import freechips.rocketchip.util._
 import freechips.rocketchip.rocket._
 
-import boom.v3.common._
-import boom.v3.exu.BrUpdateInfo
-import boom.v3.util.{IsKilledByBranch, GetNewBrMask, BranchKillableQueue, IsOlder, UpdateBrMask, AgePriorityEncoder, WrapInc, Transpose}
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.BrUpdateInfo
+import testriscvboom.v3.util.{IsKilledByBranch, GetNewBrMask, BranchKillableQueue, IsOlder, UpdateBrMask, AgePriorityEncoder, WrapInc, Transpose}
 
 
 class BoomWritebackUnit(implicit edge: TLEdgeOut, p: Parameters) extends L1HellaCacheModule()(p) {

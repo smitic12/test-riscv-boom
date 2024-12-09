@@ -41,7 +41,7 @@
 //    - ability to turn off things if VM is disabled
 //    - reconsider port count of the wakeup, retry stuff
 
-package boom.v4.lsu
+package testriscvboom.v4.lsu
 
 import chisel3._
 import chisel3.util._
@@ -51,9 +51,9 @@ import freechips.rocketchip.rocket
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.Str
 
-import boom.v4.common._
-import boom.v4.exu.{BrUpdateInfo, Exception, CommitSignals, MemGen, ExeUnitResp, Wakeup}
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.exu.{BrUpdateInfo, Exception, CommitSignals, MemGen, ExeUnitResp, Wakeup}
+import testriscvboom.v4.util._
 
 class BoomDCacheReq(implicit p: Parameters) extends BoomBundle()(p)
   with HasBoomUOP

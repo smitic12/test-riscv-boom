@@ -9,7 +9,7 @@ import scalalib._
 // support BSP
 import mill.bsp._
 
-object boom extends ScalaModule { m =>
+object testriscvboom extends ScalaModule { m =>
   override def millSourcePath = os.pwd
   override def scalaVersion = "2.13.14"
   override def scalacOptions = Seq(

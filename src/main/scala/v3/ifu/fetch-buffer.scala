@@ -11,7 +11,7 @@
 //
 // Takes a FetchBundle and converts into a vector of MicroOps.
 
-package boom.v3.ifu
+package testriscvboom.v3.ifu
 
 import chisel3._
 import chisel3.util._
@@ -19,8 +19,8 @@ import chisel3.util._
 import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.rocket.{MStatus, BP, BreakpointUnit}
 
-import boom.v3.common._
-import boom.v3.util.{BoolToChar, MaskUpper}
+import testriscvboom.v3.common._
+import testriscvboom.v3.util.{BoolToChar, MaskUpper}
 
 /**
  * Bundle that is made up of converted MicroOps from the Fetch Bundle

@@ -3,7 +3,7 @@
 // All Rights Reserved. See LICENSE and LICENSE.SiFive for license details.
 //------------------------------------------------------------------------------
 
-package boom.v4.common
+package testriscvboom.v4.common
 
 import chisel3._
 import chisel3.util.{log2Up}
@@ -15,9 +15,9 @@ import freechips.rocketchip.prci.{SynchronousCrossing, AsynchronousCrossing, Rat
 import freechips.rocketchip.rocket._
 import freechips.rocketchip.tile._
 
-import boom.v4.ifu._
-import boom.v4.exu._
-import boom.v4.lsu._
+import testriscvboom.v4.ifu._
+import testriscvboom.v4.exu._
+import testriscvboom.v4.lsu._
 
 // ---------------------
 // BOOM Config Fragments

@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import chisel3._
 import chisel3.util._
@@ -18,8 +18,8 @@ import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.rocket
 import freechips.rocketchip.tile
 
-import boom.v4.common._
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.util._
 
 /**
  * Top level datapath that wraps the floating point issue window, regfile, and arithmetic units.

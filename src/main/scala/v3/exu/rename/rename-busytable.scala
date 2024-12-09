@@ -9,12 +9,12 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
-import boom.v3.common._
-import boom.v3.util._
+import testriscvboom.v3.common._
+import testriscvboom.v3.util._
 import org.chipsalliance.cde.config.Parameters
 
 class BusyResp extends Bundle

@@ -14,7 +14,7 @@
 //
 // TODO: explore possibility of conditional IO fields? if a branch unit... how to add extra to IO in subclass?
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import chisel3._
 import chisel3.util._
@@ -26,9 +26,9 @@ import freechips.rocketchip.tile
 import freechips.rocketchip.rocket.{PipelinedMultiplier,BP,BreakpointUnit,Causes,CSR}
 import ALUTMR._
 
-import boom.v4.common._
-import boom.v4.ifu._
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.ifu._
+import testriscvboom.v4.util._
 
 
 
@@ -134,7 +134,7 @@ class ALUUnit(dataWidth: Int)(implicit p: Parameters)
   extends FunctionalUnit(
     isAluUnit = true,
     dataWidth = dataWidth)
-  with boom.v4.ifu.HasBoomFrontendParameters
+  with testriscvboom.v4.ifu.HasBoomFrontendParameters
   with freechips.rocketchip.rocket.constants.ScalarOpConstants
 {
   io.req.ready := true.B

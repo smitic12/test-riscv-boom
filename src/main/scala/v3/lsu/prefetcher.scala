@@ -3,7 +3,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.lsu
+package testriscvboom.v3.lsu
 
 import chisel3._
 import chisel3.util._
@@ -15,9 +15,9 @@ import freechips.rocketchip.tile._
 import freechips.rocketchip.util._
 import freechips.rocketchip.rocket._
 
-import boom.v3.common._
-import boom.v3.exu.BrResolutionInfo
-import boom.v3.util.{IsKilledByBranch, GetNewBrMask, BranchKillableQueue, IsOlder, UpdateBrMask}
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.BrResolutionInfo
+import testriscvboom.v3.util.{IsKilledByBranch, GetNewBrMask, BranchKillableQueue, IsOlder, UpdateBrMask}
 
 
 

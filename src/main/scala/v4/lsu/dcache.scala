@@ -4,7 +4,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v4.lsu
+package testriscvboom.v4.lsu
 
 import chisel3._
 import chisel3.util._
@@ -16,9 +16,9 @@ import freechips.rocketchip.tile._
 import freechips.rocketchip.util._
 import freechips.rocketchip.rocket._
 
-import boom.v4.common._
-import boom.v4.exu.BrUpdateInfo
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.exu.BrUpdateInfo
+import testriscvboom.v4.util._
 
 
 class BoomWritebackUnit(implicit edge: TLEdgeOut, p: Parameters) extends L1HellaCacheModule()(p) {

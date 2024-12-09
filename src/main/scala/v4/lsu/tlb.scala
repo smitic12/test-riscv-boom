@@ -1,4 +1,4 @@
-package boom.v4.lsu
+package testriscvboom.v4.lsu
 
 import chisel3._
 import chisel3.util._
@@ -10,9 +10,9 @@ import freechips.rocketchip.subsystem.{CacheBlockBytes}
 import freechips.rocketchip.diplomacy.{RegionType}
 import freechips.rocketchip.util._
 
-import boom.v4.common._
-import boom.v4.exu.{BrResolutionInfo, Exception, CommitSignals}
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.exu.{BrResolutionInfo, Exception, CommitSignals}
+import testriscvboom.v4.util._
 
 class NBDTLB(instruction: Boolean, lgMaxSize: Int, cfg: TLBConfig)(implicit edge: TLEdgeOut, p: Parameters) extends BoomModule()(p) {
   require(!instruction)

@@ -11,7 +11,7 @@
 //
 // Generate the functional unit control signals from the micro-op opcodes.
 
-package boom.v3.exu
+package testriscvboom.v3.exu
 
 import chisel3._
 import chisel3.util._
@@ -21,7 +21,7 @@ import freechips.rocketchip.util.uintToBitPat
 import freechips.rocketchip.rocket.CSR
 import freechips.rocketchip.rocket.ALU._
 
-import boom.v3.common._
+import testriscvboom.v3.common._
 
 /**
  * Control signal bundle for register renaming

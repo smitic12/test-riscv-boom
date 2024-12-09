@@ -1,4 +1,4 @@
-package boom.v3.lsu
+package testriscvboom.v3.lsu
 
 import chisel3._
 import chisel3.util._
@@ -12,8 +12,8 @@ import freechips.rocketchip.tile._
 import freechips.rocketchip.tilelink.{TLInwardNode, TLIdentityNode, TLOutwardNode, TLTempNode}
 import freechips.rocketchip.interrupts._
 import freechips.rocketchip.subsystem._
-import boom.v3.lsu.{BoomNonBlockingDCache, LSU, LSUCoreIO}
-import boom.v3.common.{BoomTileParams, MicroOp, BoomCoreParams, BoomModule}
+import testriscvboom.v3.lsu.{BoomNonBlockingDCache, LSU, LSUCoreIO}
+import testriscvboom.v3.common.{BoomTileParams, MicroOp, BoomCoreParams, BoomModule}
 import freechips.rocketchip.prci.ClockSinkParameters
 
 
@@ -150,7 +150,7 @@ class BoomLSUShim(implicit p: Parameters) extends BoomModule()(p)
   io.lsu.rob_pnr_idx := rob_tail
   io.lsu.commit_load_at_rob_head := false.B
 
-  io.lsu.brupdate.b1 := (0.U).asTypeOf(new boom.v3.exu.BrUpdateMasks)
+  io.lsu.brupdate.b1 := (0.U).asTypeOf(new testriscvboom.v3.exu.BrUpdateMasks)
   io.lsu.brupdate.b2.uop := DontCare
   io.lsu.brupdate.b2.mispredict := false.B
   io.lsu.brupdate.b2.taken := false.B

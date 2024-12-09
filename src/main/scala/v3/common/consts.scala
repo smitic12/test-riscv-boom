@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.common.constants
+package testriscvboom.v3.common.constants
 
 import chisel3._
 import chisel3.util._
@@ -265,8 +265,8 @@ trait ScalarOpConstants
   // between software NOPs and machine-generated Bubbles in the pipeline.
   val BUBBLE  = (0x4033).U(32.W)
 
-  def NullMicroOp()(implicit p: Parameters): boom.v3.common.MicroOp = {
-    val uop = Wire(new boom.v3.common.MicroOp)
+  def NullMicroOp()(implicit p: Parameters): testriscvboom.v3.common.MicroOp = {
+    val uop = Wire(new testriscvboom.v3.common.MicroOp)
     uop            := DontCare // Overridden in the following lines
     uop.uopc       := uopNOP // maybe not required, but helps on asserts that try to catch spurious behavior
     uop.bypassable := false.B
@@ -276,7 +276,7 @@ trait ScalarOpConstants
     uop.pdst       := 0.U
     uop.dst_rtype  := RT_X
 
-    val cs = Wire(new boom.v3.common.CtrlSignals())
+    val cs = Wire(new testriscvboom.v3.common.CtrlSignals())
     cs             := DontCare // Overridden in the following lines
     cs.br_type     := BR_N
     cs.csr_cmd     := freechips.rocketchip.rocket.CSR.N
@@ -346,7 +346,7 @@ trait RISCVConstants
 
   // Note: Accepts only EXPANDED rvc instructions
   def GetCfiType(inst: UInt)(implicit p: Parameters): UInt = {
-    val bdecode = Module(new boom.v3.exu.BranchDecode)
+    val bdecode = Module(new testriscvboom.v3.exu.BranchDecode)
     bdecode.io.inst := inst
     bdecode.io.pc := 0.U
     bdecode.io.out.cfi_type

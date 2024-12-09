@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v4.common.constants
+package testriscvboom.v4.common.constants
 
 import chisel3._
 import chisel3.util._
@@ -138,7 +138,7 @@ trait ScalarOpConstants
   val FC_I2F  = 8
   val FC_F2I  = 9
 
-  def NullMicroOp(implicit p: Parameters) = 0.U.asTypeOf(new boom.v4.common.MicroOp)
+  def NullMicroOp(implicit p: Parameters) = 0.U.asTypeOf(new testriscvboom.v4.common.MicroOp)
 }
 
 /**
@@ -198,7 +198,7 @@ trait RISCVConstants
 
   // Note: Accepts only EXPANDED rvc instructions
   def GetCfiType(inst: UInt)(implicit p: Parameters): UInt = {
-    val bdecode = Module(new boom.v4.exu.BranchDecode)
+    val bdecode = Module(new testriscvboom.v4.exu.BranchDecode)
     bdecode.io.inst := inst
     bdecode.io.pc := 0.U
     bdecode.io.out.cfi_type

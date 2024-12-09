@@ -1,4 +1,4 @@
-package boom.v3.ifu
+package testriscvboom.v3.ifu
 
 import chisel3._
 import chisel3.util._
@@ -7,8 +7,8 @@ import org.chipsalliance.cde.config.{Field, Parameters}
 import freechips.rocketchip.diplomacy._
 import freechips.rocketchip.tilelink._
 
-import boom.v3.common._
-import boom.v3.util.{BoomCoreStringPrefix, WrapInc}
+import testriscvboom.v3.common._
+import testriscvboom.v3.util.{BoomCoreStringPrefix, WrapInc}
 
 import scala.math.min
 

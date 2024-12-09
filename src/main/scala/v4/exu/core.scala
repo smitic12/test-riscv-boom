@@ -26,7 +26,7 @@
 //   wb  - Writeback
 //   com - Commit
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import java.nio.file.{Paths}
 
@@ -40,9 +40,9 @@ import freechips.rocketchip.tile.{HasFPUParameters, TraceBundle}
 import freechips.rocketchip.util.{Str, UIntIsOneOf, CoreMonitorBundle, PlusArg}
 import freechips.rocketchip.devices.tilelink.{PLICConsts, CLINTConsts}
 
-import boom.v4.common._
-import boom.v4.ifu.{GlobalHistory, HasBoomFrontendParameters}
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.ifu.{GlobalHistory, HasBoomFrontendParameters}
+import testriscvboom.v4.util._
 
 /**
  * Top level core object that connects the Frontend to the rest of the pipeline.
@@ -55,10 +55,10 @@ class BoomCore()(implicit p: Parameters) extends BoomModule
   {
     val hartid = Input(UInt(hartIdLen.W))
     val interrupts = Input(new freechips.rocketchip.rocket.CoreInterrupts(false))
-    val ifu = new boom.v4.ifu.BoomFrontendIO
+    val ifu = new testriscvboom.v4.ifu.BoomFrontendIO
     val ptw = Flipped(new freechips.rocketchip.rocket.DatapathPTWIO())
     val rocc = Flipped(new freechips.rocketchip.tile.RoCCCoreIO())
-    val lsu = Flipped(new boom.v4.lsu.LSUCoreIO)
+    val lsu = Flipped(new testriscvboom.v4.lsu.LSUCoreIO)
     val ptw_tlb = new freechips.rocketchip.rocket.TLBPTWIO()
     val trace = Output(new TraceBundle)
     val fcsr_rm = UInt(freechips.rocketchip.tile.FPConstants.RM_SZ.W)

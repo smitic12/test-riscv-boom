@@ -9,14 +9,14 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.common
+package testriscvboom.v3.common
 
 import chisel3._
 import chisel3.util._
 
 import org.chipsalliance.cde.config.Parameters
 
-import boom.v3.exu.FUConstants
+import testriscvboom.v3.exu.FUConstants
 
 /**
  * Extension to BoomBundle to add a MicroOp

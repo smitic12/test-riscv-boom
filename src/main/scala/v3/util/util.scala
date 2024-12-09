@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 //------------------------------------------------------------------------------
 
-package boom.v3.util
+package testriscvboom.v3.util
 
 import chisel3._
 import chisel3.util._
@@ -20,8 +20,8 @@ import freechips.rocketchip.util.{Str}
 import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.tile.{TileKey}
 
-import boom.v3.common.{MicroOp}
-import boom.v3.exu.{BrUpdateInfo}
+import testriscvboom.v3.common.{MicroOp}
+import testriscvboom.v3.exu.{BrUpdateInfo}
 
 /**
  * Object to XOR fold a input register of fullLength into a compressedLength.
@@ -97,12 +97,12 @@ object UpdateBrMask
     out.br_mask := GetNewBrMask(brupdate, uop)
     out
   }
-  def apply[T <: boom.v3.common.HasBoomUOP](brupdate: BrUpdateInfo, bundle: T): T = {
+  def apply[T <: testriscvboom.v3.common.HasBoomUOP](brupdate: BrUpdateInfo, bundle: T): T = {
     val out = WireInit(bundle)
     out.uop.br_mask := GetNewBrMask(brupdate, bundle.uop.br_mask)
     out
   }
-  def apply[T <: boom.v3.common.HasBoomUOP](brupdate: BrUpdateInfo, bundle: Valid[T]): Valid[T] = {
+  def apply[T <: testriscvboom.v3.common.HasBoomUOP](brupdate: BrUpdateInfo, bundle: Valid[T]): Valid[T] = {
     val out = WireInit(bundle)
     out.bits.uop.br_mask := GetNewBrMask(brupdate, bundle.bits.uop.br_mask)
     out.valid := bundle.valid && !IsKilledByBranch(brupdate, bundle.bits.uop.br_mask)
@@ -268,7 +268,7 @@ object Sext
  */
 object ImmGen
 {
-  import boom.v3.common.{LONGEST_IMM_SZ, IS_B, IS_I, IS_J, IS_S, IS_U}
+  import testriscvboom.v3.common.{LONGEST_IMM_SZ, IS_B, IS_I, IS_J, IS_S, IS_U}
   def apply(ip: UInt, isel: UInt): SInt = {
     val sign = ip(LONGEST_IMM_SZ-1).asSInt
     val i30_20 = Mux(isel === IS_U, ip(18,8).asSInt, sign)
@@ -445,10 +445,10 @@ class Compactor[T <: chisel3.Data](n: Int, k: Int, gen: T) extends Module
  * Create a queue that can be killed with a branch kill signal.
  * Assumption: enq.valid only high if not killed by branch (so don't check IsKilled on io.enq).
  */
-class BranchKillableQueue[T <: boom.v3.common.HasBoomUOP](gen: T, entries: Int, flush_fn: boom.v3.common.MicroOp => Bool = u => true.B, flow: Boolean = true)
+class BranchKillableQueue[T <: testriscvboom.v3.common.HasBoomUOP](gen: T, entries: Int, flush_fn: testriscvboom.v3.common.MicroOp => Bool = u => true.B, flow: Boolean = true)
   (implicit p: org.chipsalliance.cde.config.Parameters)
-  extends boom.v3.common.BoomModule()(p)
-  with boom.v3.common.HasBoomCoreParameters
+  extends testriscvboom.v3.common.BoomModule()(p)
+  with testriscvboom.v3.common.HasBoomCoreParameters
 {
   val io = IO(new Bundle {
     val enq     = Flipped(Decoupled(gen))

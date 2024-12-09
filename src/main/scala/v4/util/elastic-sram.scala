@@ -3,7 +3,7 @@
 // All Rights Reserved. See LICENSE and LICENSE.SiFive for license details.
 //------------------------------------------------------------------------------
 
-package boom.v4.util
+package testriscvboom.v4.util
 
 import chisel3._
 import chisel3.util._

@@ -13,7 +13,7 @@
 // A given execution pipeline may contain multiple functional units; one or more
 // read ports, and one or more writeports.
 
-package boom.v4.exu
+package testriscvboom.v4.exu
 
 import scala.collection.mutable.{ArrayBuffer}
 
@@ -26,9 +26,9 @@ import org.chipsalliance.cde.config.{Parameters}
 import freechips.rocketchip.tile
 import freechips.rocketchip.util._
 
-import boom.v4.common._
-import boom.v4.ifu.FTQInfo
-import boom.v4.util._
+import testriscvboom.v4.common._
+import testriscvboom.v4.ifu.FTQInfo
+import testriscvboom.v4.util._
 
 
 class Wakeup(implicit p: Parameters) extends BoomBundle

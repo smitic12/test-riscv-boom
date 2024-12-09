@@ -39,7 +39,7 @@
 //    - ability to turn off things if VM is disabled
 //    - reconsider port count of the wakeup, retry stuff
 
-package boom.v3.lsu
+package testriscvboom.v3.lsu
 
 import chisel3._
 import chisel3.util._
@@ -49,17 +49,17 @@ import freechips.rocketchip.rocket
 import freechips.rocketchip.tilelink._
 import freechips.rocketchip.util.Str
 
-import boom.v3.common._
-import boom.v3.exu.{BrUpdateInfo, Exception, FuncUnitResp, CommitSignals, ExeUnitResp}
-import boom.v3.util.{BoolToChar, AgePriorityEncoder, IsKilledByBranch, GetNewBrMask, WrapInc, IsOlder, UpdateBrMask}
+import testriscvboom.v3.common._
+import testriscvboom.v3.exu.{BrUpdateInfo, Exception, FuncUnitResp, CommitSignals, ExeUnitResp}
+import testriscvboom.v3.util.{BoolToChar, AgePriorityEncoder, IsKilledByBranch, GetNewBrMask, WrapInc, IsOlder, UpdateBrMask}
 
 class LSUExeIO(implicit p: Parameters) extends BoomBundle()(p)
 {
   // The "resp" of the maddrcalc is really a "req" to the LSU
   val req       = Flipped(new ValidIO(new FuncUnitResp(xLen)))
   // Send load data to regfiles
-  val iresp    = new DecoupledIO(new boom.v3.exu.ExeUnitResp(xLen))
-  val fresp    = new DecoupledIO(new boom.v3.exu.ExeUnitResp(xLen+1)) // TODO: Should this be fLen?
+  val iresp    = new DecoupledIO(new testriscvboom.v3.exu.ExeUnitResp(xLen))
+  val fresp    = new DecoupledIO(new testriscvboom.v3.exu.ExeUnitResp(xLen+1)) // TODO: Should this be fLen?
 }
 
 class BoomDCacheReq(implicit p: Parameters) extends BoomBundle()(p)
