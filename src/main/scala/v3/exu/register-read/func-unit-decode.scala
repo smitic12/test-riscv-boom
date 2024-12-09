@@ -19,7 +19,7 @@ import chisel3.util._
 import org.chipsalliance.cde.config.Parameters
 import freechips.rocketchip.util.uintToBitPat
 import freechips.rocketchip.rocket.CSR
-import freechips.rocketchip.rocket.ALU._
+import testriscvboom.v3.exu.ALUTMR._
 
 import testriscvboom.v3.common._
 

@@ -14,12 +14,12 @@ import freechips.rocketchip.rocket.Instructions._
 import freechips.rocketchip.rocket.Instructions32
 import freechips.rocketchip.rocket.CustomInstructions._
 import freechips.rocketchip.rocket.RVCExpander
-import freechips.rocketchip.rocket.ALU._
 import freechips.rocketchip.rocket.{CSR, Causes, DecodeLogic}
 import freechips.rocketchip.util._
 
 import testriscvboom.v4.common._
 import testriscvboom.v4.util._
+import testriscvboom.v4.exu.ALUTMR._
 
 // scalastyle:off
 /**

@@ -1114,7 +1114,7 @@ class BoomCore()(implicit p: Parameters) extends BoomModule
   csr.io.exception := RegNext(rob.io.com_xcpt.valid)
   // csr.io.pc used for setting EPC during exception or CSR.io.trace.
 
-  csr.io.pc        := (boom.v4.util.AlignPCToBoundary(io.ifu.com_pc, icBlockBytes)
+  csr.io.pc        := (testriscvboom.v4.util.AlignPCToBoundary(io.ifu.com_pc, icBlockBytes)
                      + RegNext(rob.io.com_xcpt.bits.pc_lob)
                      - Mux(RegNext(rob.io.com_xcpt.bits.edge_inst), 2.U, 0.U))
   // Cause not valid for for CALL or BREAKPOINTs (CSRFile will override it).

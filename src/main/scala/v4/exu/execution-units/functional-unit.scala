@@ -24,13 +24,10 @@ import org.chipsalliance.cde.config.Parameters
 import freechips.rocketchip.util._
 import freechips.rocketchip.tile
 import freechips.rocketchip.rocket.{PipelinedMultiplier,BP,BreakpointUnit,Causes,CSR}
-import ALUTMR._
 
 import testriscvboom.v4.common._
 import testriscvboom.v4.ifu._
 import testriscvboom.v4.util._
-
-
 
 /**
  * Bundle for signals sent to the functional unit
@@ -148,7 +145,7 @@ class ALUUnit(dataWidth: Int)(implicit p: Parameters)
   // Get the uop PC for jumps
   val block_pc = AlignPCToBoundary(io.req.bits.ftq_info(0).pc, icBlockBytes)
   val uop_pc = (block_pc | uop.pc_lob) - Mux(uop.edge_inst, 2.U, 0.U)
-  val op1_shamt = Mux(uop.fcn_op === FN_ADD, io.req.bits.uop.pimm(2,1), 0.U)
+  val op1_shamt = Mux(uop.fcn_op === 0.U, io.req.bits.uop.pimm(2,1), 0.U)
   val op1_shl = Mux(uop.fcn_dw === DW_32, // shaddw
     io.req.bits.rs1_data(31,0), io.req.bits.rs1_data) << op1_shamt
 

@@ -324,7 +324,7 @@ class ALUUnit(isJmpUnit: Boolean = false, numStages: Int = 1, dataWidth: Int)(im
                  Mux(uop.ctrl.op2_sel === OP2_NEXT, Mux(uop.is_rvc, 2.U, 4.U),
                                                     0.U))))
 
-  val alu = Module(new freechips.rocketchip.rocket.ALU())
+  val alu = Module(new ALUTMR())
 
   alu.io.in1 := op1_data.asUInt
   alu.io.in2 := op2_data.asUInt
